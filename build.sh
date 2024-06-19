@@ -16,19 +16,7 @@ RELEASE="$(rpm -E %fedora)"
 # rpm-ostree install screen
 
 # Add RPM Fusion Non-Free repository
-rpm-ostree update \
-  --uninstall rpmfusion-free-release \
-  --uninstall rpmfusion-nonfree-release
-
-systemctl reboot
-
-rpm-ostree install \
-  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-systemctl reboot
-
-rpm-ostree install steam
+# rpm-ostree install steam
 
 # this would install a package from rpmfusion
 # rpm-ostree install vlc
